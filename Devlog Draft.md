@@ -12,3 +12,7 @@
 > DAY 5:
 > • after a break, i'm back at organization and i'm setting up a github repo, including a roadmap and timeline
 > ![[roadmap.png]] 
+
+> DAY 7:
+> • whole idea is changed. we are now doing nikola tesla.
+> • whoops.

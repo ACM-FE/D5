@@ -6,5 +6,6 @@
     "downscalePercent": 100
   },
   "useMarkdownLinks": true,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "spellcheck": true
 }
