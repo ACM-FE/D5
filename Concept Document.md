@@ -22,9 +22,8 @@ The game is set in the apocalypse, and it has to *feel* like it. The world is in
 
 \raggedright
 
-
 ## Characters
-Monotony is **not sexy**.
+Monotony is **not sexy**. We're not making a grayscale nightmare of concrete.
 
 Zombies should be covered in flowers, with vibrant pinks, purples and blues.
 
@@ -47,6 +46,16 @@ We are making **one, *maybe* two** levels, and polishing them to be as high-qual
 # Gameplay
 The name of the game is Resource Management except the game isn't called that.
 
+You have limited tools, ammo and resources, and you have to navigate your objectives and fight off hordes without running out of any of these. 
+
+## Weaponry
+Tesla did not *typically* develop weapons intentionally (with a notable exception), but many of his inventions can easily function as such.
+
+### The Notable Exception
+The --- was marketed as a 'death beam', although Tesla explicitly stated many times that it was not a **death ray**, as there was much stigma about that concept at the time.
+
+It was essentially what we now call a railgun. It fired slugs or pellets at very high velocity using electromagnetic force.
+
 # Story
 The story doesn't need to be The Odyssey. Lean into the silliness, it's a dumb idea, but a dumb idea can be executed well. Silly doesn't mean low quality.
 
@@ -59,10 +68,32 @@ Okay, yes a very saturated concept. But not without merit! Here is the origin of
 > 
 > Now the world has fallen, most plants are dead or dying as nutrients are horded by the plants growing on zombies, and humanity recedes into smaller and smaller pockets.
 
-## Justification
-You, be you teammate or assessor, may be wondering: "Does this really meet the brief?".
+# Audience
+Our game is a fast paced, hectic first person, puzzle solving experience that draws inspiration from classic shooters such as Doom and Ultra Kill. We need to make sure that we create a game that appeals to players of these games. By studying the various elements and similarities of these games, we can better appeal to our audience and create a game that not only appeals to these sorts of players, but one that stands out in a niche market such as this.
 
-Yes.
+Our game will most likely attract a diverse audience. By incorporating mechanics like obtaining new tools and weapons as the player progresses and having a simple movement system that allows for basic platforming we hope to appeal to a broad audience like these games have before us, and while these games have the stigma of being ‘male oriented games’ it is important to recognize that these games appeal to so many more people than that and so we will strive to create a game which is inclusive of and accessible to all players by building on these features with the hope of developing a game which captures the spirit of its predecessors while also taking a unique spin on the genre.
 
-At the end of the day, this premise is all to justify a fun and engaging way of learning about Nikola Tesla.
+## Doom
+DOOM’s main demographic is teenage to middle age men, this is easily identifiable by the games main concept and setting, Doom puts the player on an alien planet, gives them guns and then makes them kill waves of aliens in a bloody and gory manner. Upon searching for the target demographic you are met with articles that praise the game for its manly rip and tear playstyle, and even such headings as this:
 
+The original DOOM was released in 1993 and has gained a massive cult following over the years and while the game was primarily targeted towards a male audience it has attracted many gamers from all walks of life who enjoy the games challenging mechanics and immersive world
+
+## Ultrakill
+Ultrakill is a fast-paced, first-person shooter game developed by New Blood Interactive. Since its release it has received positive reviews from both gamers and critics. The game is known for its high difficulty level, challenging gameplay mechanics, and retro-inspired graphics.
+
+Ultrakill’s audience is primarily made up of a unique subset of fans of the FPS genre who enjoy fast-paced and intense action. The game's high difficulty makes it appealing to players who enjoy a challenge and prefer to sink a lot of time into a game to master it.
+
+While Ultrakill doesn’t appear to target a specific age range, it is more than likely that the game attracts teenagers and young adults as these are the people with the most time available to put into a game like this, they are also the types of people who are most likely to be active in the gaming community
+
+Additionally, the game's retro-inspired graphics and nostalgic feel may appeal to older gamers who grew up playing classic first-person shooters such as Doom and Quake. Overall, Ultra Kill's audience is likely made up of a diverse group of gamers who share a passion for challenging, fast-paced first-person shooter games.
+
+## Ratchet & Clank
+
+While the main elements of games like Ultrakill and Doom are fast-paced combat and first person shooter gameplay, these games also incorporate elements of exploration and platforming. Combining these with the game’s unique visual style and gameplay mechanics of the ‘Rip and Tear’ genre may also draw in players who prefer more casual action oriented games such as Ratchet and Clank who are looking for a more serious game to get stuck into
+
+Additionally as stated before, the demographic of Ultrakill players is more than likely diverse and while the game’s difficulty may appeal to those more hardcore gamers, I would argue that the game’s accessibility with easy to pick up yet hard to master controls and mechanics can help new players feel more comfortable with a more hardcore game like this.
+
+## Ratchet & Clank
+While the main elements of games like Ultrakill and Doom are fast-paced combat and first person shooter gameplay, these games also incorporate elements of exploration and platforming. Combining these with the game’s unique visual style and gameplay mechanics of the ‘Rip and Tear’ genre may also draw in players who prefer more casual action oriented games such as Ratchet and Clank who are looking for a more serious game to get stuck into
+
+Additionally as stated before, the demographic of Ultrakill players is more than likely diverse and while the game’s difficulty may appeal to those more hardcore gamers, I would argue that the game’s accessibility with easy to pick up yet hard to master controls and mechanics can help new players feel more comfortable with a more hardcore game like this.  
