@@ -13,6 +13,9 @@
 > • after a break, i'm back at organization and i'm setting up a github repo, including a roadmap and timeline
 > ![[roadmap.png]] 
 
-> DAY 7:
-> • whole idea is changed. we are now doing nikola tesla.
-> • whoops.
+> Day 7:
+> • tutors were not a big fan of the junji ito pitch. we have compromised and ended up on nikola tesla but zombies.
+
+> Day 8:
+> • team meeting, gameplay loop got more ironed out (t&c), research into tesla's work for weapon ideas (z). target audience & persona identified (k)
+> 

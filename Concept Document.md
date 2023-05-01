@@ -8,6 +8,11 @@ author:
 numbersections: true
 abstract: "Nikola Tesla, genius inventor and master engineer is fighting his way through the zombie apocalypse, hoping to reach and kill his arch-rival, Thomas Edison. He must use his tools and inventions to solve puzzles and fight zombies."
 ---
+### A Brief Note on Cutting Corners:
+We are *on the clock*. We cannot afford to make a finished game, so we are making a ***DEMO***. As this paragraph is being written, we are exactly 1 week into the project, with 6 weeks left.
+
+We are making **one, *maybe* two** levels, and polishing them to be as high-quality as possible.
+
 # Style
 The game is set in the apocalypse, and it has to *feel* like it. The world is in disarray, and survivors are few and far between. Make it feel **abandoned**. Make it feel **hostile**. Draw on *Hostile Architecture*, as well as video game influences like *The Last of Us* or *Bioshock*.
 
@@ -37,13 +42,6 @@ In contrast to the zombies, the environments of the game should be dull and grey
 
 Take a page from Hostile Architecture when designing the levels; the levels should feel dilapidated and broken-down, while still being engaging and fun to play.
 
-# Cutting Corners
-We are *on the clock*. We cannot afford to make a finished game, so we are making a ***DEMO***. As this paragraph is being written, we are exactly 1 week into the project, with 6 weeks left.
-
-We are making **one, *maybe* two** levels, and polishing them to be as high-quality as possible.
-
-\[TODO: ADD MORE HERE\]
-
 # Gameplay
 The name of the game is Resource Management except the game isn't called that.
 
@@ -59,10 +57,5 @@ Okay, yes a very saturated concept. But not without merit! Here is the origin of
 > 
 > Now the world has fallen, most plants are dead or dying as nutrients are horded by the plants growing on zombies, and humanity recedes into smaller and smaller pockets.
 
-## Justification
-You, be you teammate or assessor, may be wondering: "Does this really meet the brief?".
-
-Yes.
-
-At the end of the day, this premise is all to justify a fun and engaging way of learning about Nikola Tesla.
+# Research
 
