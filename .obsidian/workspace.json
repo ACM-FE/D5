@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "2e77cb316086fece",
+        "id": "709975d23a6b2d41",
         "type": "tabs",
         "children": [
           {
-            "id": "96669862417a56c0",
+            "id": "b5f545fbb9191093",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Concept Document.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Concept Document.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Concept Document.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,12 +118,11 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Concept Document.md"
-              }
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "horizontal",
@@ -138,32 +131,62 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "workspaces:Manage workspace layouts": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
-      "command-palette:Open command palette": false,
-      "workspaces:Manage workspace layouts": false
+      "command-palette:Open command palette": false
     }
   },
-  "active": "96669862417a56c0",
+  "active": "b5f545fbb9191093",
   "lastOpenFiles": [
-    "Meetings/Week 1.md",
-    "Concept Document.md",
-    "Concept Document.pdf",
     "templates/Meeting Notes.md",
-    "Pasted image 20230425151200.png",
-    "Untitled.md",
-    "Meetings",
     "templates",
+    "roadmap.png",
     "TLOU.png",
-    "nightmare.png",
-    "Concept DocumentOLD.md",
-    "Devlog Draft.md",
     "Project Management.md",
+    "Pasted image 20230425151200.png",
     "PaperMario.png",
-    "Pasted image 20230422143845.png.md",
-    "roadmap.png"
+    "Meetings/Week 1.md",
+    "Meetings",
+    "Devlog Draft.md",
+    "Concept DocumentOLD.md",
+    "Concept Document.pdf",
+    "Concept Document.md",
+    "NikolaTesla/Library/Artifacts/26/26efa9183334bc961bf8cbd8121405b3",
+    "NikolaTesla/Library/Artifacts/15/15fb2640cc029b0e623ab5d040dc498d",
+    "NikolaTesla/Library/Artifacts/04/0411f302706c7a0ca5fd38ce7f9a60a6",
+    "NikolaTesla/Build/WinPixEventRuntime.dll",
+    "NikolaTesla/Build/UnityCrashHandler64.exe",
+    "NikolaTesla/Build/NikolaTesla.exe",
+    "NikolaTesla/Library/ShaderCache/shader/Upsample2D64e4/00/3a368156313243fa7cdee67bc9cc4456.bin",
+    "NikolaTesla/Assets/textures/cargo_pants_norm.png",
+    "NikolaTesla/Assets/textures/cargo_pants_diff.png",
+    "NikolaTesla/Assets/textures/lightblue_eye.png",
+    "NikolaTesla/Assets/textures/old_lightskinned_male_diffuse2.png",
+    "NikolaTesla/Assets/Scenes/debug/Lightmap-0_comp_shadowmask.png",
+    "NikolaTesla/Assets/Scenes/debug/Lightmap-0_comp_dir.png",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Samples~/README.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/whats-new.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/UpgradeGuide.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/TableOfContents.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/Samples.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/Reference.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/OffMeshLink.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavMoveToDestination.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavMoveToClickPoint.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavMeshModifier.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavMeshSurface.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavMeshObstacle.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavMeshModifierVolume.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavMeshLink.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavMeshBuildingComponents.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavMeshAgent.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavInnerWorkings.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavigationWindow.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavigationSystem.md",
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavigationOverview.md"
   ]
 }
