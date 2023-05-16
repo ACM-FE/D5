@@ -11,8 +11,12 @@
             "id": "b5f545fbb9191093",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Devlog Draft.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -60,6 +64,14 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "0527a2325f34d0b8",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
           }
         ]
       }
@@ -81,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Devlog Draft.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Devlog Draft.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Devlog Draft.md"
+              }
             }
           }
         ],
@@ -142,32 +158,33 @@
   },
   "active": "b5f545fbb9191093",
   "lastOpenFiles": [
+    "NikolaTesla/Build/NikolaTesla_Data/sharedassets0.resource",
+    "NikolaTesla/Temp/UnityTempFile-601442a85d393a1468b905f1d6dabe55",
+    "NikolaTesla/Library/ShaderCache/shader/Lit9335/00/bd26abecf300944c05d498344f9b27ff.bin",
+    "NikolaTesla/Library/ShaderCache/shader/Lit9335/00/8bbdf7530fcc9772ae95521e0ab2d3a0.bin",
+    "NikolaTesla/Library/ShaderCache/shader/Lit9335/00/3a070aefe52ea4fb9c173b2749caa99a.bin",
+    "NikolaTesla/Library/ShaderCache/shader/Lit9335/00/3281c0ac30e567d6c76a667b5f46202f.bin",
+    "NikolaTesla/Library/ShaderCache/shader/Lit9335/00/47c2d3fae3ed4d106d3fce0e4491448d.bin",
+    "NikolaTesla/Library/ShaderCache/shader/Lit9335/00/e35d1c118f4093fc6dcd9718c870ab63.bin",
+    "NikolaTesla/Library/ShaderCache/shader/Lit9335/00/57e327a8791bf3b3dcd537eb3f5741f8.bin",
+    "NikolaTesla/Library/ShaderCache/shader/Lit9335/00/6903b8d7b19fdda9ee55a0253c554564.bin",
+    "NikolaTesla/Library/ShaderCache/shader/Lit9335/00/ee1a8d4df1850918be97e91b1a40a2c0.bin",
+    "NikolaTesla/Assets/Materials/LabFloor_roughness.png",
+    "NikolaTesla/Assets/Materials/LabFloor_normal.png",
+    "NikolaTesla/Assets/Materials/LabFloor_metallic.png",
+    "NikolaTesla/Assets/Materials/LabFloor_height.png",
+    "NikolaTesla/Assets/Materials/LabFloor_basecolor.png",
+    "NikolaTesla/Assets/Materials/LabFloor_ambientocclusion.png",
     "templates/Meeting Notes.md",
-    "templates",
     "roadmap.png",
     "TLOU.png",
     "Project Management.md",
     "Pasted image 20230425151200.png",
     "PaperMario.png",
     "Meetings/Week 1.md",
-    "Meetings",
     "Devlog Draft.md",
     "Concept DocumentOLD.md",
-    "Concept Document.pdf",
     "Concept Document.md",
-    "NikolaTesla/Library/Artifacts/26/26efa9183334bc961bf8cbd8121405b3",
-    "NikolaTesla/Library/Artifacts/15/15fb2640cc029b0e623ab5d040dc498d",
-    "NikolaTesla/Library/Artifacts/04/0411f302706c7a0ca5fd38ce7f9a60a6",
-    "NikolaTesla/Build/WinPixEventRuntime.dll",
-    "NikolaTesla/Build/UnityCrashHandler64.exe",
-    "NikolaTesla/Build/NikolaTesla.exe",
-    "NikolaTesla/Library/ShaderCache/shader/Upsample2D64e4/00/3a368156313243fa7cdee67bc9cc4456.bin",
-    "NikolaTesla/Assets/textures/cargo_pants_norm.png",
-    "NikolaTesla/Assets/textures/cargo_pants_diff.png",
-    "NikolaTesla/Assets/textures/lightblue_eye.png",
-    "NikolaTesla/Assets/textures/old_lightskinned_male_diffuse2.png",
-    "NikolaTesla/Assets/Scenes/debug/Lightmap-0_comp_shadowmask.png",
-    "NikolaTesla/Assets/Scenes/debug/Lightmap-0_comp_dir.png",
     "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Samples~/README.md",
     "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/whats-new.md",
     "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/UpgradeGuide.md",
@@ -186,7 +203,6 @@
     "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavMeshAgent.md",
     "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavInnerWorkings.md",
     "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavigationWindow.md",
-    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavigationSystem.md",
-    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavigationOverview.md"
+    "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Documentation~/NavigationSystem.md"
   ]
 }

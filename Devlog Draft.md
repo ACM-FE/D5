@@ -18,4 +18,9 @@
 
 > Day 8:
 > • team meeting, gameplay loop got more ironed out (t&c), research into tesla's work for weapon ideas (z). target audience & persona identified (k)
-> 
+
+# FLOWER ZOMBIES
+this is hell, but i'm going to explain the process of making the zombies.
+
+## first process.
+jesus fucking christ okay. i made a person in makehuman (open source), i went in blender and reduced the poly count, then modelled a flower, used a particle system to paint flowers on the guy, MAPPED THE VERTEX GROUPS BY HAND and put it on mixamo.
