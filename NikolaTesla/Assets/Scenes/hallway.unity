@@ -136,7 +136,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh174204
+  m_Name: pb_Mesh178580
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
@@ -607,7 +607,7 @@ PrefabInstance:
     - target: {fileID: 449180631839736664, guid: 50117bebc551f0f4bb4f20856f2ab1c5,
         type: 3}
       propertyPath: m_Tilt
-      value: 4.30002
+      value: 1.404884
       objectReference: {fileID: 0}
     - target: {fileID: 4235614065986465543, guid: 50117bebc551f0f4bb4f20856f2ab1c5,
         type: 3}
@@ -618,6 +618,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747233278273369383, guid: 50117bebc551f0f4bb4f20856f2ab1c5,
+        type: 3}
+      propertyPath: m_DefaultActionMap
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5747233278273369383, guid: 50117bebc551f0f4bb4f20856f2ab1c5,
+        type: 3}
+      propertyPath: m_NotificationBehavior
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8579428376244835475, guid: 50117bebc551f0f4bb4f20856f2ab1c5,
         type: 3}
@@ -843,7 +853,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2011176944}
-  m_LocalRotation: {x: 0.026527785, y: 0.7066091, z: -0.026527785, w: 0.7066091}
+  m_LocalRotation: {x: 0.0086688595, y: 0.7070537, z: -0.0086688595, w: 0.7070537}
   m_LocalPosition: {x: -11, y: 1.222, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0

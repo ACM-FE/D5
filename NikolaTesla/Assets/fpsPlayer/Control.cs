@@ -14,19 +14,23 @@ public class Control : MonoBehaviour
     private InputAction move;
     private InputAction sprint;
     private InputAction look;
+    private InputAction fire;
 
     // component refs
     private Rigidbody rb;
     private CinemachineBasicMultiChannelPerlin ns;
     private CinemachineRecomposer rc;
+    public Animator currentWeaponAnim;
+    public Weapon currentWeapon;
 
-    // Start is called before the first frame update
+
     void Awake()
     {
         // assign bindings to actions
         move = PlayerBindings.FindActionMap("Player").FindAction("Move"); 
         sprint = PlayerBindings.FindActionMap("Player").FindAction("Sprint");
-
+        fire = PlayerBindings.FindActionMap("Player").FindAction("Fire");
+        fire.performed += Fire;
         look = PlayerBindings.FindActionMap("Player").FindAction("Look");
 
         // assign component refs 
@@ -36,6 +40,11 @@ public class Control : MonoBehaviour
 
         rc.m_Tilt=0;
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+    private void Fire(InputAction.CallbackContext cc) {
+        currentWeaponAnim.SetTrigger("fire");
+        currentWeapon.makeAttack();
     }
 
     private int Move() {
@@ -63,7 +72,6 @@ public class Control : MonoBehaviour
         rc.m_Tilt = Mathf.Clamp(rc.m_Tilt-delta.y,-70,70);   
     }
 
-    // Update is called once per frame
     void Update() {
         ns.m_AmplitudeGain = Move();
         

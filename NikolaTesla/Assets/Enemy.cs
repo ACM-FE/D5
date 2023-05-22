@@ -102,6 +102,8 @@ public class Enemy : MonoBehaviour
     IEnumerator attack() {
         attacking = true;
 
+        // fuck you for writing this. 
+        // if you keep this in your final build, you deserve the death penalty.
         anim.SetTrigger("attack");
         yield return new WaitUntil(() => anim.GetAnimatorTransitionInfo(0).fullPathHash != 0);
         canMove = false;
