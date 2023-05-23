@@ -931,11 +931,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c00c911252cb34429b37bdace92571a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  health: 3
   speed: 3.5
-  attackDistance: 2.5
+  AttackAnim: {fileID: -203655887218126122, guid: 37fb0cc29d7b92643aa195ffdfd9e9e9,
+    type: 3}
+  HitAnim: {fileID: -203655887218126122, guid: 0bac538906991bc87823e37cee9ec7ed, type: 3}
+  attackDistance: 4
   hunting: 0
   aggroTime: 2
+  steadyTime: -1
+  attacking: 0
 --- !u!195 &4457853790779377631
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -950,9 +955,9 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 200
-  m_StoppingDistance: 0
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
-  m_AutoBraking: 0
+  m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
   m_BaseOffset: -0.1

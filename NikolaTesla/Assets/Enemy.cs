@@ -3,15 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Enemy : MonoBehaviour
-{
+public class Enemy : MonoBehaviour {
     private NavMeshAgent agent;
     private Transform player;
     private Animator anim;
+    private new Rigidbody rigidbody;
+    private new CapsuleCollider collider;
+    private new AudioSource audio;
+    private Weapon weapon;
 
     [Header("Stats")]
     public int health;
     public float speed;
+
+    [Header("Animations")]
+    public AnimationClip AttackAnim;
+    public AnimationClip HitAnim;
 
 
     [Header ("Internals")]
@@ -22,6 +29,8 @@ public class Enemy : MonoBehaviour
     private bool hunting;
     [SerializeField]
     private float aggroTime;
+    [SerializeField]
+    private float steadyTime;
 
     // DEBUG INTERNALS
     private bool attacking = false;
@@ -34,6 +43,9 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         anim = GetComponent<Animator>();
+        rigidbody = GetComponent<Rigidbody>();
+        collider = GetComponent<CapsuleCollider>();
+        weapon = GetComponentInChildren<Weapon>();
     }
 
     // messy bullshit
@@ -69,27 +81,36 @@ public class Enemy : MonoBehaviour
     }
 
     void Update() {
-        if (PlayerInLOS()) {
+        if (PlayerInLOS() && agent.enabled) {
             //print("WOOFWOOFBARKBARK");
+            canMove=true;
             aggroClock = aggroTime;
-            Move();
-        } else if (aggroClock > 0f) {
-            print(aggroClock);
-            print("grrrr");
+            
+        } else if (aggroClock > 0f && agent.enabled) {
+            //print(aggroClock);
+            //print("grrrr");
+            canMove = true;
             aggroClock -= Time.deltaTime;
-            Move();
-        } else {
-            anim.SetBool("walking", false);
+        } else {canMove=false;}
+
+        if (Vector3.Distance(transform.position,player.position) < attackDistance && !attacking && PlayerInLOS()) {
+            Attack();
         }
 
+        Move();
+    }
 
-        if (Vector3.Distance(transform.position,player.position) < attackDistance && !attacking) {
-            StartCoroutine(attack());
-        }
+    void Attack() {
+        //StartCoroutine(attack());
+        attacking = true;
+        anim.SetTrigger("attack");
+        print(weapon.makeAttack().name);
+
+        StartCoroutine(finishAttack(AttackAnim.length + steadyTime));
     }
 
     void Move() {
-        if (canMove) {
+        if (canMove&&!attacking) {
             agent.destination = player.position;
             anim.SetBool("walking", true);
             agent.speed = speed;
@@ -99,6 +120,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    // hopefully obsolete...
     IEnumerator attack() {
         attacking = true;
 
@@ -110,6 +132,34 @@ public class Enemy : MonoBehaviour
         yield return new WaitUntil(() => anim.GetAnimatorTransitionInfo(0).fullPathHash == 1567584094); 
         canMove = true;
 
+        attacking = false;
+    }
+
+    void hit(int damage) {
+        health -= damage;
+        canMove = false;
+        if (health <= 0) {
+            print("owie");
+            rigidbody.isKinematic = true;
+            canMove = false;
+            collider.enabled=false;
+            agent.enabled=false;
+            
+            anim.SetBool("Dead",true);
+        } else {
+            anim.SetTrigger("Hit");
+            
+        }
+        moveDelay(HitAnim.length);
+        
+    }
+
+    IEnumerator moveDelay(float delay) {
+        yield return new WaitForSeconds(delay);
+        canMove=true;
+    }
+    IEnumerator finishAttack(float delay) {
+        yield return new WaitForSeconds(delay);
         attacking = false;
     }
 }

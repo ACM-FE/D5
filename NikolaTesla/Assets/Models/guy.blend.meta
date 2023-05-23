@@ -40,6 +40,7 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -78,6 +79,7 @@ ModelImporter:
     normalSmoothingSource: 0
   referencedClips:
   - 37fb0cc29d7b92643aa195ffdfd9e9e9
+  - 0bac538906991bc87823e37cee9ec7ed
   - b0c283411d7a441498aa091761d2cd28
   - 5eae3477a99743a47bcaeac4e137cbae
   - bf9c0beea2032274088657c2998888b2

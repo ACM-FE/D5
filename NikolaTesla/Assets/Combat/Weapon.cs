@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class Weapon : MonoBehaviour {
-    // clashes with Object.name - fix at some point
-    public string name;
+    public new string name;
     BoxCollider hurtbox;
-    public GameObject decal;
     Attack[] attacks;
 
     void Awake() {
@@ -22,6 +21,7 @@ public class Weapon : MonoBehaviour {
         if (attack==null) {attack = attacks[0];}
         //print(attack.name);
 
+        attack.action.Invoke();
         return attack;
     }
 }

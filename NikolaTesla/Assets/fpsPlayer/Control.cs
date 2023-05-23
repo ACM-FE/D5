@@ -4,8 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
 
-public class Control : MonoBehaviour
-{
+public class Control : MonoBehaviour {
     public InputActionAsset PlayerBindings;
     public float speed;
     public float sens;
@@ -22,6 +21,9 @@ public class Control : MonoBehaviour
     private CinemachineRecomposer rc;
     public Animator currentWeaponAnim;
     public Weapon currentWeapon;
+
+    // transients
+    private bool isAttacking = false;
 
 
     void Awake()
@@ -43,23 +45,19 @@ public class Control : MonoBehaviour
     }
 
     private void Fire(InputAction.CallbackContext cc) {
-        currentWeaponAnim.SetTrigger("fire");
-        currentWeapon.makeAttack();
+        if (!isAttacking) {
+            //isAttacking = true;
+            currentWeaponAnim.SetTrigger("fire");
+            Attack attack = currentWeapon.makeAttack(); 
 
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-
-        Physics.Raycast(ray,out hit,2f);
-
-        try {hit.transform.ToString();}
-        catch {
-            return;
+            IEnumerator finishAttack() {
+                yield return new WaitForSeconds(attack.anim.length);
+                isAttacking = false;
+            }   
+            StartCoroutine(finishAttack());
+            
         }
-
-        if (hit.transform.gameObject.tag != "Enemy") {
-            Instantiate(currentWeapon.decal,hit.point,Quaternion.FromToRotation(Vector3.forward,ray.direction));
-        }
-    
+        
     }
 
     private int Move() {
