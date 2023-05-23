@@ -45,6 +45,21 @@ public class Control : MonoBehaviour
     private void Fire(InputAction.CallbackContext cc) {
         currentWeaponAnim.SetTrigger("fire");
         currentWeapon.makeAttack();
+
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+
+        Physics.Raycast(ray,out hit,2f);
+
+        try {hit.transform.ToString();}
+        catch {
+            return;
+        }
+
+        if (hit.transform.gameObject.tag != "Enemy") {
+            Instantiate(currentWeapon.decal,hit.point,Quaternion.FromToRotation(Vector3.forward,ray.direction));
+        }
+    
     }
 
     private int Move() {
