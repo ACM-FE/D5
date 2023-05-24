@@ -34,6 +34,7 @@ public class Control : MonoBehaviour {
         fire = PlayerBindings.FindActionMap("Player").FindAction("Fire");
         fire.performed += Fire;
         look = PlayerBindings.FindActionMap("Player").FindAction("Look");
+        //look.performed += Look;
 
         // assign component refs 
         rb = GetComponent<Rigidbody>();
@@ -86,8 +87,7 @@ public class Control : MonoBehaviour {
     }
 
     void Update() {
-        ns.m_AmplitudeGain = Move();
-        
         Look();
+        ns.m_AmplitudeGain = Move();
     }
 }

@@ -144,7 +144,9 @@ public class Enemy : MonoBehaviour {
             canMove = false;
             collider.enabled=false;
             agent.enabled=false;
-            
+            this.enabled = false;
+            audio.enabled = false;
+
             anim.SetBool("Dead",true);
         } else {
             anim.SetTrigger("Hit");

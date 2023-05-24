@@ -60,6 +60,7 @@ ModelImporter:
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -100,6 +101,7 @@ ModelImporter:
   - 37fb0cc29d7b92643aa195ffdfd9e9e9
   - b0c283411d7a441498aa091761d2cd28
   - 5eae3477a99743a47bcaeac4e137cbae
+  - 0bac538906991bc87823e37cee9ec7ed
   - bf9c0beea2032274088657c2998888b2
   - 80e5e0213f918f341be510494fd3caa3
   importAnimation: 1
