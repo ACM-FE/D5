@@ -14,13 +14,16 @@ public class Control : MonoBehaviour {
     private InputAction sprint;
     private InputAction look;
     private InputAction fire;
+    private InputAction weapon;
 
     // component refs
     private Rigidbody rb;
     private CinemachineBasicMultiChannelPerlin ns;
     private CinemachineRecomposer rc;
-    public Animator currentWeaponAnim;
+    private Animator armAnimator;
     public Weapon currentWeapon;
+    public Weapon[] weapons;
+    private int weaponIndex = 1;
 
     // transients
     private bool isAttacking = false;
@@ -34,21 +37,38 @@ public class Control : MonoBehaviour {
         fire = PlayerBindings.FindActionMap("Player").FindAction("Fire");
         fire.performed += Fire;
         look = PlayerBindings.FindActionMap("Player").FindAction("Look");
+        weapon = PlayerBindings.FindActionMap("Player").FindAction("Weapon");
+        weapon.performed += SwitchWeapon;
         //look.performed += Look;
 
         // assign component refs 
         rb = GetComponent<Rigidbody>();
         rc = GetComponentInChildren<CinemachineRecomposer>();
         ns = GetComponentInChildren<CinemachineBasicMultiChannelPerlin>();
+        armAnimator = GetComponentInChildren<Animator>();
+        weapons = GetComponentsInChildren<Weapon>();
 
         rc.m_Tilt=0;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+
+    // this makes me want to vomit...
+    private void SwitchWeapon(InputAction.CallbackContext cc) {
+        if (weapon.activeControl.displayName == "Scroll Down" || weapon.activeControl.displayName == "D-Pad Down") {
+            weaponIndex = Mathf.Clamp(weaponIndex+(int)Mathf.Sign(weapon.ReadValue<float>()),1, weapons.Length);
+        } else {
+            weaponIndex = int.Parse(weapon.activeControl.displayName);
+        }
+        isAttacking = false;
+        armAnimator.SetInteger("weaponIndex",weaponIndex);
+        currentWeapon = weapons[weaponIndex-1];
+    }
+
     private void Fire(InputAction.CallbackContext cc) {
         if (!isAttacking) {
-            //isAttacking = true;
-            currentWeaponAnim.SetTrigger("fire");
+            isAttacking = true;
+            armAnimator.SetTrigger("fire");
             Attack attack = currentWeapon.makeAttack(); 
 
             IEnumerator finishAttack() {

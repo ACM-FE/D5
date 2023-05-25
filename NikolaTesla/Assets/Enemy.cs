@@ -36,7 +36,9 @@ public class Enemy : MonoBehaviour {
     private bool attacking = false;
     private bool canMove = true;
 
+    [SerializeField]
     private float aggroClock = 0f;
+    private bool alerted = false;
     
 
     void Start() {
@@ -46,6 +48,7 @@ public class Enemy : MonoBehaviour {
         rigidbody = GetComponent<Rigidbody>();
         collider = GetComponent<CapsuleCollider>();
         weapon = GetComponentInChildren<Weapon>();
+        audio = GetComponent<AudioSource>();
     }
 
     // messy bullshit
@@ -81,17 +84,18 @@ public class Enemy : MonoBehaviour {
     }
 
     void Update() {
-        if (PlayerInLOS() && agent.enabled) {
+        if ((PlayerInLOS() || alerted )&& agent.enabled) {
             //print("WOOFWOOFBARKBARK");
             canMove=true;
             aggroClock = aggroTime;
             
         } else if (aggroClock > 0f && agent.enabled) {
+            alerted = false;
             //print(aggroClock);
             //print("grrrr");
             canMove = true;
             aggroClock -= Time.deltaTime;
-        } else {canMove=false;}
+        } else {canMove=false; alerted=false;}
 
         if (Vector3.Distance(transform.position,player.position) < attackDistance && !attacking && PlayerInLOS()) {
             Attack();
@@ -144,21 +148,22 @@ public class Enemy : MonoBehaviour {
             canMove = false;
             collider.enabled=false;
             agent.enabled=false;
-            this.enabled = false;
             audio.enabled = false;
-
             anim.SetBool("Dead",true);
+
+            // final thing or everything breaks
+            this.enabled = false;
         } else {
             anim.SetTrigger("Hit");
-            
+            StartCoroutine(moveDelay(HitAnim.length));
         }
-        moveDelay(HitAnim.length);
-        
     }
 
     IEnumerator moveDelay(float delay) {
         yield return new WaitForSeconds(delay);
         canMove=true;
+        agent.destination = player.position;
+        aggroClock = aggroTime;
     }
     IEnumerator finishAttack(float delay) {
         yield return new WaitForSeconds(delay);
