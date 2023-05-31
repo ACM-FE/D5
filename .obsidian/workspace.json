@@ -18,8 +18,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "282a902aa9ab49de",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.3.4"
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -156,7 +167,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b5f545fbb9191093",
+  "active": "282a902aa9ab49de",
   "lastOpenFiles": [
     "NikolaTesla/Library/ShaderCache/shader/Lit9335/00/c078d92b78fedb92070c3f0799185fb3.bin",
     "NikolaTesla/Assets/Settings/light.lighting.meta",
