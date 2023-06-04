@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour {
     public new string name;
     BoxCollider hurtbox;
     Attack[] attacks;
+    public Animation reload;
 
     void Awake() {
         attacks = GetComponents<Attack>();

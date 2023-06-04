@@ -33,7 +33,8 @@ public class Enemy : MonoBehaviour {
     private float steadyTime;
 
     // DEBUG INTERNALS
-    private bool attacking = false;
+    [HideInInspector]
+    public bool attacking = false;
     private bool canMove = true;
 
     [SerializeField]
@@ -53,7 +54,7 @@ public class Enemy : MonoBehaviour {
 
     // messy bullshit
     // why the fuck would you write code like this
-    bool PlayerInLOS() {
+    public bool PlayerInLOS() {
         /*
         RaycastHit hit;
         if (Physics.CapsuleCast(
@@ -142,6 +143,7 @@ public class Enemy : MonoBehaviour {
     void hit(int damage) {
         health -= damage;
         canMove = false;
+        attacking = false;
         if (health <= 0) {
             print("owie");
             rigidbody.isKinematic = true;

@@ -6,11 +6,13 @@ TagManager:
   tags:
   - Enemy
   - prop
+  - killbox
+  - breakable
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Player
   - Water
   - UI
   - 

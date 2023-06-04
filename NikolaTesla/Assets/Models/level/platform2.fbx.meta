@@ -3,9 +3,24 @@ guid: 7b7564279bf8af140af12b2dd2497585
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Concrete
+    second: {fileID: 2100000, guid: c629ef1e1af6e444692596d8ac745871, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rim
+    second: {fileID: 2100000, guid: d4441b4816ac1f341a3d0c69e7765ab8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Walls
+    second: {fileID: 2100000, guid: f8cae35c7f86d8e469930a5362a52943, type: 2}
   materials:
-    materialImportMode: 2
+    materialImportMode: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -37,7 +52,7 @@ ModelImporter:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
-    addColliders: 0
+    addColliders: 1
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importPhysicalCameras: 1

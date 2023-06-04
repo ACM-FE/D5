@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 
 public class Attack : MonoBehaviour {
-    public new string name;
+    public new string name = "Attack";
     public float damage;
     public AnimationClip anim;
     public UnityEvent action;

@@ -1,5 +1,5 @@
 using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Cinemachine;
@@ -8,6 +8,8 @@ public class Control : MonoBehaviour {
     public InputActionAsset PlayerBindings;
     public float speed;
     public float sens;
+    public float jumpHeight;
+    public float fallSpeed;
 
     // actions
     private InputAction move;
@@ -15,6 +17,7 @@ public class Control : MonoBehaviour {
     private InputAction look;
     private InputAction fire;
     private InputAction weapon;
+    private InputAction jump;
 
     // component refs
     private Rigidbody rb;
@@ -23,10 +26,14 @@ public class Control : MonoBehaviour {
     private Animator armAnimator;
     public Weapon currentWeapon;
     public Weapon[] weapons;
+    public Animation hitEffect;
     private int weaponIndex = 1;
 
     // transients
     private bool isAttacking = false;
+    [HideInInspector]
+    public bool canJump = true;
+    private bool canMove = true;
 
 
     void Awake()
@@ -39,6 +46,8 @@ public class Control : MonoBehaviour {
         look = PlayerBindings.FindActionMap("Player").FindAction("Look");
         weapon = PlayerBindings.FindActionMap("Player").FindAction("Weapon");
         weapon.performed += SwitchWeapon;
+        jump = PlayerBindings.FindActionMap("Player").FindAction("Jump");
+        jump.performed += Jump;
         //look.performed += Look;
 
         // assign component refs 
@@ -46,12 +55,16 @@ public class Control : MonoBehaviour {
         rc = GetComponentInChildren<CinemachineRecomposer>();
         ns = GetComponentInChildren<CinemachineBasicMultiChannelPerlin>();
         armAnimator = GetComponentInChildren<Animator>();
-        weapons = GetComponentsInChildren<Weapon>();
 
         rc.m_Tilt=0;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
+    public void AddWeapon(Weapon weapon) {
+        Array.Resize(ref weapons,weapons.Length+1);
+        weapons[weapons.Length-1] = weapon;
+        //Equip(weapons.Length);
+    }
 
     // this makes me want to vomit...
     private void SwitchWeapon(InputAction.CallbackContext cc) {
@@ -61,12 +74,21 @@ public class Control : MonoBehaviour {
             weaponIndex = int.Parse(weapon.activeControl.displayName);
         }
         isAttacking = false;
+        try {
+            currentWeapon = weapons[weaponIndex-1];
+            armAnimator.SetInteger("weaponIndex",weaponIndex);
+        } finally {}
+    }
+
+    public void Equip(int weapon) {
+        weaponIndex=weapon;
+        isAttacking = false;
         armAnimator.SetInteger("weaponIndex",weaponIndex);
         currentWeapon = weapons[weaponIndex-1];
     }
 
     private void Fire(InputAction.CallbackContext cc) {
-        if (!isAttacking) {
+        if (!isAttacking && canMove && !currentWeapon.reload.isPlaying) {
             isAttacking = true;
             armAnimator.SetTrigger("fire");
             Attack attack = currentWeapon.makeAttack(); 
@@ -79,6 +101,23 @@ public class Control : MonoBehaviour {
             
         }
         
+    }
+
+    private void Jump(InputAction.CallbackContext cc) {
+        IEnumerator fall() {
+
+            while(!canJump) {
+                rb.velocity = new Vector3(rb.velocity.x,(Mathf.MoveTowards(rb.velocity.y,-jumpHeight,fallSpeed)),rb.velocity.z);
+                yield return new WaitForEndOfFrame();
+            }
+        }
+        if (canJump&&canMove) { 
+            rb.velocity += Vector3.up * jumpHeight;
+            GetComponentInChildren<Grounding>().stayTime=0;
+            canJump = false;
+            
+            StartCoroutine(fall());
+        }
     }
 
     private int Move() {
@@ -107,7 +146,23 @@ public class Control : MonoBehaviour {
     }
 
     void Update() {
-        Look();
-        ns.m_AmplitudeGain = Move();
+        if (canMove) {
+            Look();
+            ns.m_AmplitudeGain = Move();
+        } else {
+            ns.m_AmplitudeGain = 0;
+            rb.velocity = Vector3.zero;
+        }
+    }
+
+    public void Hurt(float damage) {
+        hitEffect.Play("hurt");
+    }
+
+    public void Freeze() {
+        canMove = false;
+    }
+    public void Go() {
+        canMove = true;
     }
 }
