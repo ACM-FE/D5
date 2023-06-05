@@ -842,6 +842,26 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 411922457}
+    - targetCorrespondingSourceObject: {fileID: -9041267756353341082, guid: f05a0885ed780f94189edb84f10ccd42,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 411922458}
+    - targetCorrespondingSourceObject: {fileID: -9041267756353341082, guid: f05a0885ed780f94189edb84f10ccd42,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 411922460}
+    - targetCorrespondingSourceObject: {fileID: -9041267756353341082, guid: f05a0885ed780f94189edb84f10ccd42,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 411922462}
+    - targetCorrespondingSourceObject: {fileID: -9041267756353341082, guid: f05a0885ed780f94189edb84f10ccd42,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 411922461}
+    - targetCorrespondingSourceObject: {fileID: -9041267756353341082, guid: f05a0885ed780f94189edb84f10ccd42,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 411922459}
   m_SourcePrefab: {fileID: 100100000, guid: f05a0885ed780f94189edb84f10ccd42, type: 3}
 --- !u!4 &364880096 stripped
 Transform:
@@ -1126,6 +1146,130 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.18103531, y: 0.3099999, z: 0.25134495}
   m_Center: {x: 0.021247042, y: 0.023823561, z: 0.0968491}
+--- !u!114 &411922458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411922452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1
+  scrollPos: {x: 0, y: 0}
+  variablesScrollPos: {x: 0, y: 0}
+  variablesExpanded: 1
+  blockViewHeight: 400
+  zoom: 1
+  scrollViewRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 0
+    height: 0
+  selectedBlocks:
+  - {fileID: 411922460}
+  selectedCommands:
+  - {fileID: 411922459}
+  variables: []
+  description: 
+  stepPause: 0
+  colorCommands: 1
+  hideComponents: 1
+  saveSelection: 1
+  localizationId: 
+  showLineNumbers: 0
+  hideCommands: []
+  luaEnvironment: {fileID: 0}
+  luaBindingName: flowchart
+--- !u!114 &411922459
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411922452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 2
+  indentLevel: 0
+  _sceneName:
+    stringRef: {fileID: 0}
+    stringVal: cutscene
+  loadingImage: {fileID: 0}
+  sceneNameOLD: 
+--- !u!114 &411922460
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411922452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 450
+    y: 53
+    width: 109
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 0
+  blockName: New Block
+  description: 
+  eventHandler: {fileID: 411922462}
+  commandList:
+  - {fileID: 411922461}
+  - {fileID: 411922459}
+  suppressAllAutoSelections: 0
+--- !u!114 &411922461
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411922452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 1
+  indentLevel: 0
+  duration: 1
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+  fadeTweenType: 4
+--- !u!114 &411922462
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 411922452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a98f5f89242e80d42865cdf1912beda3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 411922460}
+  suppressBlockAutoSelect: 0
+  tagFilter:
+  - Player
+  FireOn: 1
+  colliderVar: {fileID: 0}
 --- !u!224 &418625053 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4333383819308958080, guid: 8f297c5e070aa874894fb889edd57ce3,
@@ -1646,7 +1790,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1490024226}
+  selectedFlowchart: {fileID: 411922458}
 --- !u!4 &659921499
 Transform:
   m_ObjectHideFlags: 1

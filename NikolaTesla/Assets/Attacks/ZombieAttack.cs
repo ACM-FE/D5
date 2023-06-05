@@ -5,7 +5,7 @@ using UnityEngine;
 public class ZombieAttack : Attack
 {
     public Enemy zombie;
-    public float damage;
+
     Transform player;
 
     public void Start() {
@@ -16,7 +16,7 @@ public class ZombieAttack : Attack
         IEnumerator delayedCheck() {
             yield return new WaitForSeconds(this.anim.length-1.5f);
             if (zombie.PlayerInLOS() && Vector3.Distance(transform.position,player.position) < 3f && zombie.attacking) {
-                player.GetComponent<Control>().Hurt(damage);
+                player.GetComponent<Control>().Hurt(20f);
             }
         }
         StartCoroutine(delayedCheck());
