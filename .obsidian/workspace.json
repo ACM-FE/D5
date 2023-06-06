@@ -13,24 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Devlog Draft.md",
+                "file": "Post-Mortem.md",
                 "mode": "source",
                 "source": false
               }
             }
-          },
-          {
-            "id": "282a902aa9ab49de",
-            "type": "leaf",
-            "state": {
-              "type": "release-notes",
-              "state": {
-                "currentVersion": "1.3.4"
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -104,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Devlog Draft.md",
+                "file": "Post-Mortem.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Devlog Draft.md",
+                "file": "Post-Mortem.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -144,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Devlog Draft.md"
+                "file": "Post-Mortem.md"
               }
             }
           }
@@ -167,8 +156,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "282a902aa9ab49de",
+  "active": "b5f545fbb9191093",
   "lastOpenFiles": [
+    "Devlog Draft.md",
     "NikolaTesla/Library/ShaderCache/shader/Lit9335/00/c078d92b78fedb92070c3f0799185fb3.bin",
     "NikolaTesla/Assets/Settings/light.lighting.meta",
     "NikolaTesla/Assets/Settings/light.lighting",
@@ -179,7 +169,6 @@
     "NikolaTesla/Library/Artifacts/c1/c138ca953a9776e8419d4d5657d72a71",
     "NikolaTesla/Library/Bee/TundraBuildState.state",
     "NikolaTesla/Library/Bee/buildprogram0.traceevents",
-    "NikolaTesla/Assets/Anims",
     "NikolaTesla/Assets/Materials/LabFloor_roughness.png",
     "NikolaTesla/Assets/Materials/LabFloor_normal.png",
     "NikolaTesla/Assets/Materials/LabFloor_metallic.png",
@@ -193,7 +182,6 @@
     "Pasted image 20230425151200.png",
     "PaperMario.png",
     "Meetings/Week 1.md",
-    "Devlog Draft.md",
     "Concept DocumentOLD.md",
     "Concept Document.md",
     "NikolaTesla/Library/PackageCache/com.unity.ai.navigation@1.1.3/Samples~/README.md",
